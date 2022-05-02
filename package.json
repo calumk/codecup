@@ -2,12 +2,10 @@
   "name": "codeflask",
   "version": "1.4.1",
   "description": "A micro code-editor for awesome web pages",
-  "main": "build/codeflask.min.js",
-  "module": "build/codeflask.module.js",
+  "main": "dist/codecup.bundle.js",
   "types": "index.d.ts",
   "files": [
-    "build/codeflask.min.js",
-    "build/codeflask.module.js",
+    "dist/codeflask.min.js",
     "index.d.ts",
     "README.md",
     "LICENSE"
@@ -43,7 +41,7 @@
     "syntax-highlight",
     "highlight"
   ],
-  "author": "Claudio Holanda",
+  "author": "Calum Knot",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kazzkiq/CodeFlask/issues"
