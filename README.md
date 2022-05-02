@@ -1,19 +1,25 @@
 
 <p align="center">
   <img src="assets/logo.png" width="190"><br>
-    CodeCup: A micro code-editor for awesome web pages.
+    CodeCup: A micro code-editor for awesome web pages.<br>
+    A Fork of <a href="https://github.com/kazzkiq/CodeFlask">CodeFlask</a>
 </p>
 
 <p align="center">
   <img src="assets/code.png" width="739">
 </p>
 
+## Why?
+CodeFlask was a brilliant project, but seems to be unmaintained, and I required some significant updates to work with a new project i am working on
+
+---
+
 ## Installation
 
 You can install CodeCup via npm:
 
 ```
-npm install @calumk/codecup
+todo
 ```
 
 Or use it directly in browser via cdn service:
