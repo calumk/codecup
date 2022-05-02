@@ -1,0 +1,114 @@
+<script src="../dist/codeflask.bundle.js"></script>
+
+<div class="container">
+
+    <center>
+        <img src="../assets/logo.png" width="300px">
+    </center>
+
+    <div id="cf_holder"></div>
+
+    <br>
+    <center>
+        <button onclick="demo_create()">Create</button>
+        <button onclick="demo_init()">Init</button>
+        <button onclick="toggle_readonly()">Toggle Readonly</button>
+        <button onclick="toggle_linenumbers()">Toggle LineNumbers</button>
+        <button class="danger" onclick="demo_dispose()">Dispose</button>
+    </center>
+</div>
+
+<script>
+
+    // new codeflask
+    let flask = undefined
+
+
+    let toggle_readonly = () => {
+        flask.toggleReadonlyMode()
+    }
+
+    let toggle_linenumbers = () => {
+        flask.toggleLineNumbers()
+    }
+
+    let demo_init = () => {
+        flask.enableLineNumbers()
+        flask.disableReadonlyMode()
+        flask.updateCode('// Hello World \nlet num_a = 45; \nlet num_b = 33; \n\nlet adder = (_num_a,_num_b) => {\n\treturn _num_a + _num_b; \n}\n\nlet ans = adder(num_a,num_b)');
+    }
+
+    let demo_create = () => {
+        demo_dispose();
+        flask = new CodeFlask('#cf_holder', { 
+            language: 'js',
+            lineNumbers: true 
+        });
+        demo_init();
+    }
+
+    let demo_dispose = () => {
+        if(flask !== undefined){
+            flask.dispose();
+            flask = undefined;
+        }
+    }
+
+
+    demo_create();
+    demo_init();
+
+</script>
+
+
+
+
+
+
+
+
+
+<style>
+    body, html{
+        margin:0;
+        padding: 0;
+    }
+
+    .container{
+        margin: 0 auto;
+        width: 800px;
+        padding:20px;
+    }
+
+    #cf_holder{
+        height:200px;
+        overflow: hidden;
+        border : 1px solid #EAEEFB;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #fff;
+        color: #222;
+        padding: 8px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border : 1px solid #EAEEFB;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+    button:hover{
+        background-color: #EAEEFB;
+        cursor: pointer;
+    }
+
+    .danger{
+        background-color: #FF5D5D;
+    }
+
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+</style>
