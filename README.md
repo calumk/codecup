@@ -20,11 +20,14 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
 * Added example folder 
 * diabled e2e tests 
   * Required (Legacy deps - might rebuild)
+* Small theme tweaks (Border, rounded corners.)
+
+### Core Changes (Will submit as PR to CodeFlask, incase it gets picked up again)
 * Added support to destroy
 * Added Linenumber add / remove 
 * Added Linenumber toggle
 * Added Readonly toggle
-* Small theme tweaks (Border, rounded corners.)
+
 ---
 
 ## Installation
