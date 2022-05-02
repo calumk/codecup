@@ -18,11 +18,12 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
 ## Changes
 * Switched from rollup to webpack
 * Added example folder 
-* diabled e2e tests 
+* disabled e2e tests 
   * Required (Legacy deps - might rebuild)
 * Small theme tweaks (Border, rounded corners.)
 
-### Core Changes (Will submit as PR to CodeFlask, incase it gets picked up again)
+### Core Changes 
+> (Submitted as [PR](https://github.com/kazzkiq/CodeFlask/pull/134) to CodeFlask, incase it gets picked up again)
 * Added support to destroy
 * Added Linenumber add / remove 
 * Added Linenumber toggle
