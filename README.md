@@ -10,8 +10,21 @@
 </p>
 
 ## Why?
-CodeFlask was a brilliant project, but seems to be unmaintained, and I required some significant updates to work with a new project i am working on
+CodeFlask was a brilliant project, but seems to be unmaintained, and it required some significant updates to work with a new project I am working on.
 
+> Yes - The new logo uses Comic Sans
+
+
+## Changes
+* Switched from rollup to webpack
+* Added example folder 
+* diabled e2e tests 
+  * Required (Legacy deps - might rebuild)
+* Added support to destroy
+* Added Linenumber add / remove 
+* Added Linenumber toggle
+* Added Readonly toggle
+* Small theme tweaks (Border, rounded corners.)
 ---
 
 ## Installation

@@ -470,9 +470,7 @@ export default class CodeFlask {
     }
   }
 
-
   dispose(){
-    // not 100% sure this removes everything.
     this.elTextarea.removeEventListener("input",this.events._input)
     this.elTextarea.removeEventListener("keydown",this.events._keydown)
     this.elTextarea.removeEventListener("scroll",this.events._scroll)
