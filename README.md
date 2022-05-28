@@ -36,13 +36,13 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
 You can install CodeCup via npm:
 
 ```
-todo
+npm i @calumk/codecup
 ```
 
 Or use it directly in browser via cdn service:
 
 ```
- todo
+https://cdn.jsdelivr.net/npm/@calumk/codecup
 ```
 
 ## Usage
