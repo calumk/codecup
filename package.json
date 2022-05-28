@@ -1,22 +1,17 @@
 {
-  "name": "codeflask",
-  "version": "1.4.1",
+  "name": "@calumk/codeflask",
+  "version": "1.5",
   "description": "A micro code-editor for awesome web pages",
   "main": "dist/codecup.bundle.js",
-  "types": "index.d.ts",
   "files": [
     "dist/codeflask.min.js",
-    "index.d.ts",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
     "build" : "webpack --mode=production",
     "build:watch" : "webpack --watch",
-    "_build": "rollup -c",
-    "_dev": "serve build & rollup -c -w",
     "pretest": "npm run build",
-    "test": "wdio test/wdio.conf.js",
     "prepublishOnly": "npm install && npm run build"
   },
   "dependencies": {
@@ -33,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kazzkiq/CodeFlask.git"
+    "url": "git+https://github.com/calumk/CodeCup.git"
   },
   "keywords": [
     "code-editor",
@@ -44,7 +39,7 @@
   "author": "Calum Knot",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kazzkiq/CodeFlask/issues"
+    "url": "https://github.com/calumk/CodeCup/issues"
   },
-  "homepage": "https://kazzkiq.github.io/CodeFlask/"
+  "homepage": "https://github.com/calumk/CodeCup"
 }
