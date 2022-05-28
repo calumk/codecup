@@ -1,6 +1,6 @@
 {
   "name": "@calumk/codeflask",
-  "version": "1.5",
+  "version": "1.5.0",
   "description": "A micro code-editor for awesome web pages",
   "main": "dist/codecup.bundle.js",
   "files": [
