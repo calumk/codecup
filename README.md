@@ -94,7 +94,7 @@ const code = flask.getCode();
 ```js
 import CodeCup from 'codecup';
 
-const flask = new CodeCup('#my-selector', {
+const cup = new CodeCup('#my-selector', {
   language: 'js',
   lineNumbers: true
 });
@@ -105,7 +105,7 @@ const flask = new CodeCup('#my-selector', {
 ```js
 import CodeCup from 'codecup';
 
-const flask = new CodeCup('#my-selector', {
+const cup = new CodeCup('#my-selector', {
   language: 'js',
   rtl: true
 });
@@ -116,7 +116,7 @@ const flask = new CodeCup('#my-selector', {
 ```js
 import CodeCup from 'codecup';
 
-const flask = new CodeCup('#my-selector', {
+const cup = new CodeCup('#my-selector', {
   language: 'js',
   readonly: true
 });
@@ -125,7 +125,7 @@ const flask = new CodeCup('#my-selector', {
 ### Adding other languages support:
 
 ```js
-flask.addLanguage('ruby', options)
+cup.addLanguage('ruby', options)
 ```
 
 #### For Example to add 'Ruby'
@@ -134,12 +134,12 @@ flask.addLanguage('ruby', options)
 import Prism from 'prismjs';
 import CodeCup from 'codecup';
 
-const flask = new CodeCup('#my-selector', {
+const cup = new CodeCup('#my-selector', {
   language: 'ruby',
   readonly: true
 });
 
-flask.addLanguage('ruby', Prism.languages['ruby']);
+cup.addLanguage('ruby', Prism.languages['ruby']);
 ```
 
 This API is simply a proxy to add a new language to [Prism](http://prismjs.com/) itself (the code highlighter). The `options` parameter must be the same accepted in Prism. You can read more about it [here](http://prismjs.com/extending.html#language-definitions).
@@ -160,7 +160,7 @@ You can easily override this theme with your own by writting your own CSS and ad
 ```js
 import CodeCup from 'codecup';
 
-const flask = new CodeCup('#my-selector', {
+const cup = new CodeCup('#my-selector', {
   language: 'js',
   defaultTheme: false
 });
