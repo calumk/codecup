@@ -12,7 +12,7 @@
 ## Why?
 CodeFlask was a brilliant project, but seems to be unmaintained, and it required some significant updates to work with a new project I am working on.
 
-> Yes - The new logo uses Comic Sans
+> Yes - The new logo uses Comic Sans :)
 
 
 ## Changes
