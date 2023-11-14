@@ -22,6 +22,8 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
   * Required (Legacy deps - might rebuild)
 * Small theme tweaks (Border, rounded corners.)
 
+* updateded all codeflask references to codeCup - 13/11/2023
+
 ### Core Changes 
 > (Submitted as [PR](https://github.com/kazzkiq/CodeFlask/pull/134) to CodeFlask, incase it gets picked up again)
 * Added support to destroy
@@ -69,7 +71,7 @@ const flask = new CodeCup(shadowElem, { language: 'js', styleParent: this.shadow
 ### Listening for changes in editor
 
 ```js
-flask.onUpdate((code) => {
+cup.onUpdate((code) => {
   // do something with code here.
   // this will trigger whenever the code
   // in the editor changes.
@@ -80,13 +82,13 @@ flask.onUpdate((code) => {
 
 ```js
 // This will also trigger .onUpdate()
-flask.updateCode('const my_new_code_here = "Blabla"');
+cup.updateCode('const my_new_code_here = "Blabla"');
 ```
 
 ### Getting the current code from editor
 
 ```js
-const code = flask.getCode();
+const code = cup.getCode();
 ```
 
 ### Enabling line numbers

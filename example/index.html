@@ -1,4 +1,4 @@
-<script src="../dist/codeflask.bundle.js"></script>
+<script src="../dist/codeCup.bundle.js"></script>
 
 <div class="container">
 
@@ -16,41 +16,53 @@
         <button onclick="toggle_linenumbers()">Toggle LineNumbers</button>
         <button class="danger" onclick="demo_dispose()">Dispose</button>
     </center>
+    <br>
+    <center>
+        <button onclick="change_language()">Change Language</button>
+    </center>
 </div>
 
 <script>
 
     // new codeflask
-    let flask = undefined
+    let cup = undefined
+
+    let current_language = 'javascript'
+
+    let change_language = () => {
+        // ask the user for a language using a simple js alert popup, then update the codeCup language
+        let language = prompt('Enter a language to change to', current_language)
+        cup.updateLanguage(language)
+    }
 
 
     let toggle_readonly = () => {
-        flask.toggleReadonlyMode()
+        cup.toggleReadonlyMode()
     }
 
     let toggle_linenumbers = () => {
-        flask.toggleLineNumbers()
+        cup.toggleLineNumbers()
     }
 
     let demo_init = () => {
-        flask.enableLineNumbers()
-        flask.disableReadonlyMode()
-        flask.updateCode('// Hello World \nlet num_a = 45; \nlet num_b = 33; \n\nlet adder = (_num_a,_num_b) => {\n\treturn _num_a + _num_b; \n}\n\nlet ans = adder(num_a,num_b)');
+        cup.enableLineNumbers()
+        cup.disableReadonlyMode()
+        cup.updateCode('// Hello World \nlet num_a = 45; \nlet num_b = 33; \n\nlet adder = (_num_a,_num_b) => {\n\treturn _num_a + _num_b; \n}\n\nlet ans = adder(num_a,num_b)');
     }
 
     let demo_create = () => {
         demo_dispose();
-        flask = new CodeFlask('#cf_holder', { 
-            language: 'js',
+        cup = new CodeCup('#cf_holder', { 
+            language: current_language,
             lineNumbers: true 
         });
         demo_init();
     }
 
     let demo_dispose = () => {
-        if(flask !== undefined){
-            flask.dispose();
-            flask = undefined;
+        if(cup !== undefined){
+            cup.dispose();
+            cup = undefined;
         }
     }
 
