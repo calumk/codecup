@@ -50,23 +50,23 @@ https://cdn.jsdelivr.net/npm/@calumk/codecup
 ## Usage
 
 ```js
-import codecup from 'codecup';
+import codecup from '@calumk/codecup';
 
-const flask = new codecup('#my-selector', { language: 'js' });
+const cup = new codecup('#my-selector', { language: 'js' });
 ```
 You can also pass a DOM element instead of a selector:
 ```js
 import codecup from 'codecup';
 
 const editorElem = document.getElementById('editor');
-const flask = new codecup(editorElem, { language: 'js' });
+const cup = new codecup(editorElem, { language: 'js' });
 ```
 Usage with Shadow DOM:
 ```js
 import codecup from 'codecup';
 ...
 const shadowElem = this.shadowRoot.querySelector('#editor');
-const flask = new codecup(shadowElem, { language: 'js', styleParent: this.shadowRoot });
+const cup = new codecup(shadowElem, { language: 'js', styleParent: this.shadowRoot });
 ```
 ### Listening for changes in editor
 
