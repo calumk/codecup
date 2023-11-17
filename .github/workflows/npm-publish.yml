@@ -8,7 +8,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - run: npm ci
+      - run: npm i
       - run: npm run build
       - uses: JS-DevTools/npm-publish@v1
         with:
