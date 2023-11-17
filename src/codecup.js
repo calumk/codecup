@@ -6,7 +6,6 @@ import Prism from 'prismjs'
 import 'prismjs/plugins/autoloader/prism-autoloader';
 Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
 
-
 export default class codeCup {
   constructor (selectorOrElement, opts) {
     if (!selectorOrElement) {
