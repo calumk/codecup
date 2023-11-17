@@ -9,18 +9,18 @@ Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/lib
 
 // import hljs from 'highlight.js';
 
-export default class CodeCup {
+export default class codeCup {
   constructor (selectorOrElement, opts) {
     if (!selectorOrElement) {
-      // If no selector or element is passed to CodeCup,
+      // If no selector or element is passed to codeCup,
       // stop execution and throw error.
-      throw Error('CodeCup expects a parameter which is Element or a String selector')
+      throw Error('codeCup expects a parameter which is Element or a String selector')
     }
 
     if (!opts) {
-      // If no selector or element is passed to CodeCup,
+      // If no selector or element is passed to codeCup,
       // stop execution and throw error.
-      throw Error('CodeCup expects an object containing options as second parameter')
+      throw Error('codeCup expects an object containing options as second parameter')
     }
 
     if (selectorOrElement.nodeType) {
@@ -46,7 +46,7 @@ export default class CodeCup {
     const isCSSInjected = injectCss(editorCss, null, this.opts.styleParent)
 
     if (!isCSSInjected) {
-      throw Error('Failed to inject CodeCup CSS.')
+      throw Error('Failed to inject codeCup CSS.')
     }
 
     // The order matters (pre > code). Don't change it
@@ -97,7 +97,7 @@ export default class CodeCup {
 
   destroyLineNumbers () {
     this.elWrapper.classList.remove('codeCup--has-line-numbers')
-    console.log(this.elLineNumbers)
+    // console.log(this.elLineNumbers)
     this.elLineNumbers.remove()
   }
 
@@ -176,7 +176,7 @@ export default class CodeCup {
 
   listenTextarea () {
     this.elTextarea.addEventListener('input', this.events._input = (e) => {
-      console.log()
+      // console.log()
       if (this.opts.readonly) {
         return;
       }
@@ -423,9 +423,9 @@ export default class CodeCup {
   }
 
   onUpdate (callback) {
-    console.log("chanfge")
+    // console.log("chanfge")
     if (callback && {}.toString.call(callback) !== '[object Function]') {
-      throw Error('CodeCup expects callback of type Function')
+      throw Error('codeCup expects callback of type Function')
     }
 
     this.updateCallBack = callback
