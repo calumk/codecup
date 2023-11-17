@@ -1,5 +1,5 @@
 export function injectCss (css, styleName, parent) {
-  const CSS_ID = styleName || 'codeCup-style'
+  const CSS_ID = styleName || 'codecup-style'
   const PARENT = parent || document.head
 
   if (!css) {

@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/codeCup.js',
+  entry: './src/codecup.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'codeCup.bundle.js',
-    library: 'codeCup',
+    filename: 'codecup.bundle.js',
+    library: 'codecup',
     libraryExport: 'default',
     libraryTarget: 'umd',
   },

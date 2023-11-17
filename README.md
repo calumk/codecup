@@ -1,7 +1,7 @@
 
 <p align="center">
   <img src="assets/logo.png" width="190"><br>
-    CodeCup: A micro code-editor for awesome web pages.<br>
+    codecup: A micro code-editor for awesome web pages.<br>
     A Fork of <a href="https://github.com/kazzkiq/CodeFlask">CodeFlask</a>
 </p>
 
@@ -22,7 +22,7 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
   * Required (Legacy deps - might rebuild)
 * Small theme tweaks (Border, rounded corners.)
 
-* updateded all codeflask references to codeCup - 13/11/2023
+* updateded all codeflask references to codecup - 13/11/2023
 
 ### Core Changes 
 > (Submitted as [PR](https://github.com/kazzkiq/CodeFlask/pull/134) to CodeFlask, incase it gets picked up again)
@@ -35,7 +35,7 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
 
 ## Installation
 
-You can install CodeCup via npm:
+You can install codecup via npm:
 
 ```
 npm i @calumk/codecup
@@ -50,23 +50,23 @@ https://cdn.jsdelivr.net/npm/@calumk/codecup
 ## Usage
 
 ```js
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 
-const flask = new CodeCup('#my-selector', { language: 'js' });
+const flask = new codecup('#my-selector', { language: 'js' });
 ```
 You can also pass a DOM element instead of a selector:
 ```js
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 
 const editorElem = document.getElementById('editor');
-const flask = new CodeCup(editorElem, { language: 'js' });
+const flask = new codecup(editorElem, { language: 'js' });
 ```
 Usage with Shadow DOM:
 ```js
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 ...
 const shadowElem = this.shadowRoot.querySelector('#editor');
-const flask = new CodeCup(shadowElem, { language: 'js', styleParent: this.shadowRoot });
+const flask = new codecup(shadowElem, { language: 'js', styleParent: this.shadowRoot });
 ```
 ### Listening for changes in editor
 
@@ -94,9 +94,9 @@ const code = cup.getCode();
 ### Enabling line numbers
 
 ```js
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 
-const cup = new CodeCup('#my-selector', {
+const cup = new codecup('#my-selector', {
   language: 'js',
   lineNumbers: true
 });
@@ -105,9 +105,9 @@ const cup = new CodeCup('#my-selector', {
 ### Enabling rtl (right to left writing)
 
 ```js
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 
-const cup = new CodeCup('#my-selector', {
+const cup = new codecup('#my-selector', {
   language: 'js',
   rtl: true
 });
@@ -116,9 +116,9 @@ const cup = new CodeCup('#my-selector', {
 ### Enabling read only mode
 
 ```js
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 
-const cup = new CodeCup('#my-selector', {
+const cup = new codecup('#my-selector', {
   language: 'js',
   readonly: true
 });
@@ -134,9 +134,9 @@ cup.addLanguage('ruby', options)
 
 ```js
 import Prism from 'prismjs';
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 
-const cup = new CodeCup('#my-selector', {
+const cup = new codecup('#my-selector', {
   language: 'ruby',
   readonly: true
 });
@@ -146,23 +146,23 @@ cup.addLanguage('ruby', Prism.languages['ruby']);
 
 This API is simply a proxy to add a new language to [Prism](http://prismjs.com/) itself (the code highlighter). The `options` parameter must be the same accepted in Prism. You can read more about it [here](http://prismjs.com/extending.html#language-definitions).
 
-By default, CodeCup supports the following languages (which are also the default supported in Prism):
+By default, codecup supports the following languages (which are also the default supported in Prism):
 
 - Markup (HTML/XML);
 - CSS;
 - C-like;
 - JavaScript;
 
-### Adding your own theme to CodeCup
+### Adding your own theme to codecup
 
-By default, CodeCup comes with a simple theme made from scratch called **[CodeNoon](https://github.com/kazzkiq/CodeCup.js/blob/master/src/styles/theme-default.js)**.
+By default, codecup comes with a simple theme made from scratch called **[CodeNoon](https://github.com/kazzkiq/codecup.js/blob/master/src/styles/theme-default.js)**.
 
 You can easily override this theme with your own by writting your own CSS and adding it to your project. If that's the case, you should also disable **CodeNoon** with the `defaultTheme` option:
 
 ```js
-import CodeCup from 'codecup';
+import codecup from 'codecup';
 
-const cup = new CodeCup('#my-selector', {
+const cup = new codecup('#my-selector', {
   language: 'js',
   defaultTheme: false
 });
@@ -170,4 +170,4 @@ const cup = new CodeCup('#my-selector', {
 
 # Credits & Thanks
 
-CodeCup.js was made possible by awesome open-source projects such as [Prism.js](https://github.com/PrismJS/prism) and [Webpack](https://github.com/webpack).
+codecup.js was made possible by awesome open-source projects such as [Prism.js](https://github.com/PrismJS/prism) and [Webpack](https://github.com/webpack).

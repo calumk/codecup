@@ -9,24 +9,24 @@ const LINE_NUMBER_WIDTH = '40px'
 
 
 export const editorCss = `
-  .codeCup {
+  .codecup {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
 
-  .codeCup, .codeCup * {
+  .codecup, .codecup * {
     box-sizing: border-box;
   }
 
-  .codeCup__pre {
+  .codecup__pre {
     pointer-events: none;
     z-index: 3;
     overflow: hidden;
   }
 
-  .codeCup__textarea {
+  .codecup__textarea {
     background: none;
     border: none;
     color: ${COLOR};
@@ -40,17 +40,17 @@ export const editorCss = `
     height: 100%;
   }
 
-  .codeCup--has-line-numbers .codeCup__textarea {
+  .codecup--has-line-numbers .codecup__textarea {
     width: calc(100% - ${LINE_NUMBER_WIDTH});
   }
 
-  .codeCup__code {
+  .codecup__code {
     display: block;
     font-family: ${FONT_FAMILY};
     overflow: hidden;
   }
 
-  .codeCup__flatten {
+  .codecup__flatten {
     padding: 10px;
     font-size: ${FONT_SIZE};
     line-height: ${LINE_HEIGHT};
@@ -64,12 +64,12 @@ export const editorCss = `
     text-align: left;
   }
 
-  .codeCup--has-line-numbers .codeCup__flatten {
+  .codecup--has-line-numbers .codecup__flatten {
     width: calc(100% - ${LINE_NUMBER_WIDTH});
     left: ${LINE_NUMBER_WIDTH};
   }
 
-  .codeCup__line-highlight {
+  .codecup__line-highlight {
     position: absolute;
     top: 10px;
     left: 0;
@@ -79,7 +79,7 @@ export const editorCss = `
     z-index: 1;
   }
 
-  .codeCup__lines {
+  .codecup__lines {
     padding: 10px 4px;
     font-size: 12px;
     line-height: ${LINE_HEIGHT};
@@ -94,15 +94,15 @@ export const editorCss = `
     z-index: 2;
   }
 
-  .codeCup__lines__line {
+  .codecup__lines__line {
     display: block;
   }
 
-  .codeCup.codeCup--has-line-numbers {
+  .codecup.codecup--has-line-numbers {
     padding-left: ${LINE_NUMBER_WIDTH};
   }
 
-  .codeCup.codeCup--has-line-numbers:before {
+  .codecup.codecup--has-line-numbers:before {
     content: '';
     position: absolute;
     left: 0;

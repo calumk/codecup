@@ -5,56 +5,56 @@ export const FONT_SIZE = '13px'
 
 
 export const defaultCssTheme = `
-.codeCup {
+.codecup {
   background: ${BACKGROUND_COLOR};
   color: #eee;
 }
 
-.codeCup .token.punctuation {
+.codecup .token.punctuation {
   color: #B2B2B2;
 }
 
-.codeCup .token.keyword {
+.codecup .token.keyword {
   color: #389EDB;
 }
 
-.codeCup .token.operator {
+.codecup .token.operator {
   color: #ff5598;
 }
 
-.codeCup .token.string {
+.codecup .token.string {
   color: #41ad8f;
 }
 
-.codeCup .token.comment {
+.codecup .token.comment {
   color: #9badb7;
 }
 
-.codeCup .token.function {
+.codecup .token.function {
   color: #FF008A;
 }
 
-.codeCup .token.boolean {
+.codecup .token.boolean {
   color: #FF008A;
 }
 
-.codeCup .token.number {
+.codecup .token.number {
   color: #FF008A;
 }
 
-.codeCup .token.selector {
+.codecup .token.selector {
   color: #FF008A;
 }
 
-.codeCup .token.property {
+.codecup .token.property {
   color: #FF008A;
 }
 
-.codeCup .token.tag {
+.codecup .token.tag {
   color: #FF008A;
 }
 
-.codeCup .token.attr-value {
+.codecup .token.attr-value {
   color: #FF008A;
 }
 `

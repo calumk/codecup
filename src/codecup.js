@@ -6,18 +6,18 @@ import Prism from 'prismjs'
 import 'prismjs/plugins/autoloader/prism-autoloader';
 Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
 
-export default class codeCup {
+export default class codecup {
   constructor (selectorOrElement, opts) {
     if (!selectorOrElement) {
-      // If no selector or element is passed to codeCup,
+      // If no selector or element is passed to codecup,
       // stop execution and throw error.
-      throw Error('codeCup expects a parameter which is Element or a String selector')
+      throw Error('codecup expects a parameter which is Element or a String selector')
     }
 
     if (!opts) {
-      // If no selector or element is passed to codeCup,
+      // If no selector or element is passed to codecup,
       // stop execution and throw error.
-      throw Error('codeCup expects an object containing options as second parameter')
+      throw Error('codecup expects an object containing options as second parameter')
     }
 
     if (selectorOrElement.nodeType) {
@@ -43,7 +43,7 @@ export default class codeCup {
     const isCSSInjected = injectCss(editorCss, null, this.opts.styleParent)
 
     if (!isCSSInjected) {
-      throw Error('Failed to inject codeCup CSS.')
+      throw Error('Failed to inject codecup CSS.')
     }
 
     // The order matters (pre > code). Don't change it
@@ -67,33 +67,33 @@ export default class codeCup {
     this.code = this.editorRoot.innerHTML
     this.editorRoot.innerHTML = ''
     this.elWrapper = this.createElement('div', this.editorRoot)
-    this.elWrapper.classList.add('codeCup')
+    this.elWrapper.classList.add('codecup')
   }
 
   createTextarea () {
     this.elTextarea = this.createElement('textarea', this.elWrapper)
-    this.elTextarea.classList.add('codeCup__textarea', 'codeCup__flatten')
+    this.elTextarea.classList.add('codecup__textarea', 'codecup__flatten')
   }
 
   createPre () {
     this.elPre = this.createElement('pre', this.elWrapper)
-    this.elPre.classList.add('codeCup__pre', 'codeCup__flatten')
+    this.elPre.classList.add('codecup__pre', 'codecup__flatten')
   }
 
   createCode () {
     this.elCode = this.createElement('code', this.elPre)
-    this.elCode.classList.add('codeCup__code', `language-${this.opts.language || 'html'}`)
+    this.elCode.classList.add('codecup__code', `language-${this.opts.language || 'html'}`)
   }
 
   createLineNumbers () {
     this.elLineNumbers = this.createElement('div', this.elWrapper)
-    this.elLineNumbers.classList.add('codeCup__lines')
-    this.elWrapper.classList.add('codeCup--has-line-numbers')
+    this.elLineNumbers.classList.add('codecup__lines')
+    this.elWrapper.classList.add('codecup--has-line-numbers')
     this.setLineNumber()
   }
 
   destroyLineNumbers () {
-    this.elWrapper.classList.remove('codeCup--has-line-numbers')
+    this.elWrapper.classList.remove('codecup--has-line-numbers')
     // console.log(this.elLineNumbers)
     this.elLineNumbers.remove()
   }
@@ -140,7 +140,7 @@ export default class codeCup {
     }
 
     if (this.opts.lineNumbers) {
-      // this.elWrapper.classList.add('codeCup--has-line-numbers')
+      // this.elWrapper.classList.add('codecup--has-line-numbers')
       this.createLineNumbers()
     }
 
@@ -165,7 +165,7 @@ export default class codeCup {
     let numberList = ''
 
     for (let i = 1; i <= this.lineNumber; i++) {
-      numberList = numberList + `<span class="codeCup__lines__line">${i}</span>`
+      numberList = numberList + `<span class="codecup__lines__line">${i}</span>`
     }
 
     this.elLineNumbers.innerHTML = numberList
@@ -422,7 +422,7 @@ export default class codeCup {
   onUpdate (callback) {
     // console.log("chanfge")
     if (callback && {}.toString.call(callback) !== '[object Function]') {
-      throw Error('codeCup expects callback of type Function')
+      throw Error('codecup expects callback of type Function')
     }
 
     this.updateCallBack = callback

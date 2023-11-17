@@ -1,4 +1,4 @@
-<script src="../dist/codeCup.bundle.js"></script>
+<script src="../dist/codecup.bundle.js"></script>
 
 <div class="container">
 
@@ -30,7 +30,7 @@
     let current_language = 'javascript'
 
     let change_language = () => {
-        // ask the user for a language using a simple js alert popup, then update the codeCup language
+        // ask the user for a language using a simple js alert popup, then update the codecup language
         let language = prompt('Enter a language to change to', current_language)
         cup.updateLanguage(language)
     }
@@ -52,7 +52,7 @@
 
     let demo_create = () => {
         demo_dispose();
-        cup = new codeCup('#cf_holder', { 
+        cup = new codecup('#cf_holder', { 
             language: current_language,
             lineNumbers: true 
         });
