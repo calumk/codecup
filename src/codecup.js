@@ -4,10 +4,8 @@ import { defaultCssTheme } from './styles/theme-default'
 import { escapeHtml } from './utils/html-escape'
 import Prism from 'prismjs'
 import 'prismjs/plugins/autoloader/prism-autoloader';
-
 Prism.plugins.autoloader.languages_path = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/';
 
-// import hljs from 'highlight.js';
 
 export default class codeCup {
   constructor (selectorOrElement, opts) {
