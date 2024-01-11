@@ -7,7 +7,6 @@ const LINE_NUMBER_WIDTH = '40px'
 
 
 
-
 export const editorCss = `
   .codecup {
     position: relative;

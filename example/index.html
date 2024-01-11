@@ -32,6 +32,7 @@
     let change_language = () => {
         // ask the user for a language using a simple js alert popup, then update the codecup language
         let language = prompt('Enter a language to change to', current_language)
+        current_language = language
         cup.updateLanguage(language)
     }
 
