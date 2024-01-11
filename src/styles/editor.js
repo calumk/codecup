@@ -9,7 +9,6 @@ const LINE_NUMBER_WIDTH = '40px'
 
 export const editorCss = `
   .codecup {
-    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
