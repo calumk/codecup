@@ -392,7 +392,7 @@ export default class codecup {
 
   updateCode (newCode) {
     this.code = newCode
-    this.elTextarea.value = newCode
+    this.elTextarea.value = escapeHtml(newCode)
     this.elCode.innerHTML = escapeHtml(newCode)
     this.highlight()
     this.setLineNumber()
@@ -407,9 +407,9 @@ export default class codecup {
     this.highlight()
   }
 
-  addLanguage (name, options) {
-    Prism.languages[name] = options
-  }
+  // addLanguage (name, options) {
+  //   Prism.languages[name] = options
+  // }
 
   populateDefault () {
     this.updateCode(this.code)

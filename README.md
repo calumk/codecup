@@ -2,7 +2,7 @@
 <p align="center">
   <img src="assets/logo.png" width="190"><br>
     codecup: A micro code-editor for awesome web pages.<br>
-    A Fork of <a href="https://github.com/kazzkiq/CodeFlask">CodeFlask</a>
+    (Originally A Fork of <a href="https://github.com/kazzkiq/CodeFlask">CodeFlask</a>)
 </p>
 
 <p align="center">
@@ -19,10 +19,13 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
 * Switched from rollup to webpack
 * Added example folder 
 * disabled e2e tests 
-  * Required (Legacy deps - might rebuild)
 * Small theme tweaks (Border, rounded corners.)
 
 * updateded all codeflask references to codecup - 13/11/2023
+* Languages are now loaded async (via prismjs), so you can load any language you want, without having to bundle them all. - Jan 2024
+
+> [!NOTE]
+> Languages supported are : [https://prismjs.com/#supported-languages](https://prismjs.com/#supported-languages)
 
 ### Core Changes 
 > (Submitted as [PR](https://github.com/kazzkiq/CodeFlask/pull/134) to CodeFlask, incase it gets picked up again)
@@ -102,15 +105,11 @@ const cup = new codecup('#my-selector', {
 });
 ```
 
-### Enabling rtl (right to left writing)
+You can also toggle line numbers after the editor is created:
 
 ```js
-import codecup from 'codecup';
+cup.toggleLineNumbers();
 
-const cup = new codecup('#my-selector', {
-  language: 'js',
-  rtl: true
-});
 ```
 
 ### Enabling read only mode
@@ -119,18 +118,21 @@ const cup = new codecup('#my-selector', {
 import codecup from 'codecup';
 
 const cup = new codecup('#my-selector', {
-  language: 'js',
+  language: 'javascript',
   readonly: true
 });
 ```
 
-### Adding other languages support:
+### changing other languages support:
 
 ```js
-cup.addLanguage('ruby', options)
+cup.updateLanguage('ruby')
+// 
+cup.updateLanguage('javascript')
+//
 ```
 
-#### For Example to add 'Ruby'
+#### For Example to add change dynamically from 'Ruby' to 'javascript'
 
 ```js
 import Prism from 'prismjs';
@@ -141,33 +143,5 @@ const cup = new codecup('#my-selector', {
   readonly: true
 });
 
-cup.addLanguage('ruby', Prism.languages['ruby']);
+cup.updateLanguage('javascript');
 ```
-
-This API is simply a proxy to add a new language to [Prism](http://prismjs.com/) itself (the code highlighter). The `options` parameter must be the same accepted in Prism. You can read more about it [here](http://prismjs.com/extending.html#language-definitions).
-
-By default, codecup supports the following languages (which are also the default supported in Prism):
-
-- Markup (HTML/XML);
-- CSS;
-- C-like;
-- JavaScript;
-
-### Adding your own theme to codecup
-
-By default, codecup comes with a simple theme made from scratch called **[CodeNoon](https://github.com/kazzkiq/codecup.js/blob/master/src/styles/theme-default.js)**.
-
-You can easily override this theme with your own by writting your own CSS and adding it to your project. If that's the case, you should also disable **CodeNoon** with the `defaultTheme` option:
-
-```js
-import codecup from 'codecup';
-
-const cup = new codecup('#my-selector', {
-  language: 'js',
-  defaultTheme: false
-});
-```
-
-# Credits & Thanks
-
-codecup.js was made possible by awesome open-source projects such as [Prism.js](https://github.com/PrismJS/prism) and [Webpack](https://github.com/webpack).
