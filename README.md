@@ -1,6 +1,7 @@
 
 <p align="center">
-  <img src="assets/logo.png" width="190"><br>
+  <img src="assets/logo2.png#gh-dark-mode-only" width="190"><br>
+  <img src="assets/logo.png#gh-light-mode-only" width="190"><br>
     codecup: A micro code-editor for awesome web pages.<br>
     (Originally A Fork of <a href="https://github.com/kazzkiq/CodeFlask">CodeFlask</a>)
 </p>
