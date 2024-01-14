@@ -23,7 +23,9 @@ CodeFlask was a brilliant project, but seems to be unmaintained, and it required
 * Small theme tweaks (Border, rounded corners.)
 
 * updateded all codeflask references to codecup - 13/11/2023
-* Languages are now loaded async (via prismjs), so you can load any language you want, without having to bundle them all. - Jan 2024
+
+> [!IMPORTANT]
+> Languages are now loaded async (via prismjs), so you can load any language you want, without having to bundle them all. - Jan 2024
 
 > [!NOTE]
 > Languages supported are : [https://prismjs.com/#supported-languages](https://prismjs.com/#supported-languages)
