@@ -135,7 +135,7 @@ export default class codecup {
     this.opts.areaId = this.opts.areaId || null
     this.opts.ariaLabelledby = this.opts.ariaLabelledby || null
     this.opts.readonly = this.opts.readonly || false
-    this.opts.copyButton = this.opts.copyButton || true
+    this.opts.copyButton = this.opts.copyButton || false
 
     // this.opts.handleSelfClosingCharacters = this.opts.handleSelfClosingCharacters || false
 
