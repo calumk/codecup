@@ -13,22 +13,20 @@
 ## Why?
 CodeFlask was a brilliant project, but seems to be unmaintained, and it required some significant updates to work with a new project I am working on.
 
-> Yes - The new logo uses Comic Sans :)
-
-
-## Changes
+### Changes
 * Switched from rollup to webpack
 * Added example folder 
 * disabled e2e tests 
 * Small theme tweaks (Border, rounded corners.)
-
 * updateded all codeflask references to codecup - 13/11/2023
-* Languages are now loaded async (via prismjs), so you can load any language you want, without having to bundle them all. - Jan 2024
+
+> [!IMPORTANT]
+> Languages are now loaded async (via prismjs), so you can load any language you want, without having to bundle them all. - Jan 2024
 
 > [!NOTE]
 > Languages supported are : [https://prismjs.com/#supported-languages](https://prismjs.com/#supported-languages)
 
-### Core Changes 
+### Core Changes as PR
 > (Submitted as [PR](https://github.com/kazzkiq/CodeFlask/pull/134) to CodeFlask, incase it gets picked up again)
 * Added support to destroy
 * Added Linenumber add / remove 
