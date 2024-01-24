@@ -111,4 +111,39 @@ export const editorCss = `
     background: #dcdfe6;
     z-index: 1;
   }
+
+  .codecup__copyButton{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 3;
+    background: #EAEEFB;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    outline: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+  }
+
+  .codecup__copyMessage{
+    position: absolute;
+    right: 32px;
+    top: 5px;
+    z-index: 3;
+    background: #EAEEFB;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    outline: none;
+    width: 55px;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Cousine', monospace;
+  }
+
 `

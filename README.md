@@ -95,6 +95,21 @@ cup.updateCode('const my_new_code_here = "Blabla"');
 const code = cup.getCode();
 ```
 
+
+### Copy Button
+
+The copy button is now enabled by default, and will copy the code to the clipboard when clicked.
+
+it can be disabled by passing `copyButton: false` in the options.
+
+```js
+const cup = new codecup('#my-selector', {
+  language: 'javascript',
+  copyButton: false
+});
+```
+
+
 ### Enabling line numbers
 
 ```js

@@ -92,6 +92,28 @@ export default class codecup {
     this.setLineNumber()
   }
 
+  createCopyButton () {
+
+    this.elCopyButtonMessage = this.createElement('div', this.elWrapper)
+    this.elCopyButtonMessage.classList.add('codecup__copyMessage')
+    this.elCopyButtonMessage.innerHTML = 'Copied!'
+    this.elCopyButtonMessage.style.display = 'none'
+
+    this.elCopyButton = this.createElement('div', this.elWrapper)
+    this.elCopyButton.classList.add('codecup__copyButton')
+    this.elCopyButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><polygon points="88 40 88 88 168 88 168 168 216 168 216 40 88 40" opacity="0.2"/><polyline points="168 168 216 168 216 40 88 40 88 88" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><rect x="40" y="88" width="128" height="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>'
+    this.elCopyButton.addEventListener('click', () => {
+      // console.log(this.elTextarea.value)
+      // console.log(this.code)
+      navigator.clipboard.writeText(this.code).then(() => {
+        this.elCopyButtonMessage.style.display = 'block'
+        setTimeout(() => {
+          this.elCopyButtonMessage.style.display = 'none'
+        }, 1000)
+      })
+    });
+  }
+
   destroyLineNumbers () {
     this.elWrapper.classList.remove('codecup--has-line-numbers')
     // console.log(this.elLineNumbers)
@@ -113,6 +135,9 @@ export default class codecup {
     this.opts.areaId = this.opts.areaId || null
     this.opts.ariaLabelledby = this.opts.ariaLabelledby || null
     this.opts.readonly = this.opts.readonly || false
+    this.opts.copyButton = this.opts.copyButton || true
+
+    // this.opts.handleSelfClosingCharacters = this.opts.handleSelfClosingCharacters || false
 
     // if handleTabs is not either true or false, make it true by default
     if (typeof this.opts.handleTabs !== 'boolean') {
@@ -159,6 +184,11 @@ export default class codecup {
     if (this.opts.readonly) {
       this.enableReadonlyMode()
     }
+
+    if (this.opts.copyButton) {
+      this.createCopyButton()
+    }
+
   }
 
   updateLineNumbersCount () {
@@ -392,7 +422,8 @@ export default class codecup {
 
   updateCode (newCode) {
     this.code = newCode
-    this.elTextarea.value = escapeHtml(newCode)
+    // this.elTextarea.value = escapeHtml(newCode)
+    this.elTextarea.value = newCode
     this.elCode.innerHTML = escapeHtml(newCode)
     this.highlight()
     this.setLineNumber()
