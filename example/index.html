@@ -56,7 +56,9 @@
         cup = new codecup('#cf_holder', { 
             language: current_language,
             lineNumbers: true ,
-            copyButton: true
+            copyButton: true,
+            maxLines : 15,
+            minLines : 5
         });
         demo_init();
     }
@@ -95,7 +97,7 @@
     }
 
     #cf_holder{
-        height:200px;
+
         overflow: hidden;
         border : 1px solid #EAEEFB;
         border-radius: 4px;

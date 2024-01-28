@@ -13,7 +13,21 @@
 ## Why?
 CodeFlask was a brilliant project, but seems to be unmaintained, and it required some significant updates to work with a new project I am working on.
 
+### Kitchen Sink Example
+
+```js
+cup = new codecup('#cf_holder', { 
+    language: "javascript",
+    lineNumbers: true ,
+    copyButton: true,
+    maxLines : 15,
+    minLines : 5
+});
+```
+
+
 ### Changes
+* Added max line number option
 * Switched from rollup to webpack
 * Added example folder 
 * disabled e2e tests 
@@ -125,6 +139,27 @@ You can also toggle line numbers after the editor is created:
 cup.toggleLineNumbers();
 
 ```
+
+### Setting max and min lines
+
+```js
+> [!IMPORTANT]
+> As of `1.90`, You can also set the max line number, (Default is 100), And the min line number, (Default is 1)
+
+> [!NOTE]
+> If you want it to be a fixed number of lines, set both to the same number.
+
+```js
+import codecup from 'codecup';
+
+const cup = new codecup('#my-selector', {
+  language: 'js',
+  lineNumbers: true,
+  maxLines: 10,
+  minLines: 10
+});
+```
+
 
 ### Enabling read only mode
 

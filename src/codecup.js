@@ -136,6 +136,8 @@ export default class codecup {
     this.opts.ariaLabelledby = this.opts.ariaLabelledby || null
     this.opts.readonly = this.opts.readonly || false
     this.opts.copyButton = this.opts.copyButton || false
+    this.opts.maxLines = this.opts.maxLines || 100
+    this.opts.minLines = this.opts.minLines || 1
 
     // this.opts.handleSelfClosingCharacters = this.opts.handleSelfClosingCharacters || false
 
@@ -199,6 +201,19 @@ export default class codecup {
     }
 
     this.elLineNumbers.innerHTML = numberList
+
+    console.log(this.opts)
+
+    // limit the number of lines between max and min line numbers. 
+    let maxLineNumber = this.opts.maxLines
+    let minLineNumber = this.opts.minLines
+    let limitedLineNumber = this.lineNumber
+    if (limitedLineNumber > maxLineNumber) {
+      limitedLineNumber = maxLineNumber
+    } else if (limitedLineNumber < minLineNumber) {
+      limitedLineNumber = minLineNumber
+    }
+    this.elWrapper.style.height = (limitedLineNumber*20) + 20 + 'px'
   }
 
   listenTextarea () {
