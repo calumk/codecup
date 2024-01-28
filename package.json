@@ -1,6 +1,6 @@
 {
   "name": "@calumk/codecup",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "A micro code-editor for awesome web pages",
   "main": "dist/codecup.bundle.js",
   "files": [

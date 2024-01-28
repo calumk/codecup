@@ -8,10 +8,14 @@ const LINE_NUMBER_WIDTH = '40px'
 
 
 export const editorCss = `
+
   .codecup {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    border : 1px solid #EAEEFB;
+    border-radius: 4px;
+    position: relative;
   }
 
   .codecup, .codecup * {

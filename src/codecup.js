@@ -203,10 +203,10 @@ export default class codecup {
     }
 
     this.elLineNumbers.innerHTML = numberList
+    
+  }
 
-    console.log(this.opts)
-
-    // limit the number of lines between max and min line numbers. 
+  updateEditorHeight () {
     let maxLineNumber = this.opts.maxLines
     let minLineNumber = this.opts.minLines
     let limitedLineNumber = this.lineNumber
@@ -217,6 +217,7 @@ export default class codecup {
     }
     this.elWrapper.style.height = (limitedLineNumber*20) + 20 + 'px'
   }
+
 
   listenTextarea () {
     this.elTextarea.addEventListener('input', this.events._input = (e) => {
@@ -370,6 +371,7 @@ export default class codecup {
     if (this.opts.lineNumbers) {
       this.updateLineNumbersCount()
     }
+    this.updateEditorHeight()
   }
 
   handleNewLineIndentation (e) {
@@ -397,6 +399,7 @@ export default class codecup {
     input.selectionEnd = selStartPos + indent + 1
 
     this.updateCode(input.value)
+    this.updateEditorHeight()
   }
 
   closeCharacter (char) {
