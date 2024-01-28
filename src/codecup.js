@@ -191,6 +191,8 @@ export default class codecup {
       this.createCopyButton()
     }
 
+    this.updateLineNumbersCount();
+
   }
 
   updateLineNumbersCount () {
