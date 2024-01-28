@@ -142,7 +142,7 @@ cup.toggleLineNumbers();
 
 ### Setting max and min lines
 
-```js
+
 > [!IMPORTANT]
 > As of `1.90`, You can also set the max line number, (Default is 100), And the min line number, (Default is 1)
 
