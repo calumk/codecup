@@ -86,6 +86,7 @@ export default class codecup {
   }
 
   createLineNumbers () {
+    // console.log('createLineNumbers')
     this.elLineNumbers = this.createElement('div', this.elWrapper)
     this.elLineNumbers.classList.add('codecup__lines')
     this.elWrapper.classList.add('codecup--has-line-numbers')
@@ -117,7 +118,9 @@ export default class codecup {
   destroyLineNumbers () {
     this.elWrapper.classList.remove('codecup--has-line-numbers')
     // console.log(this.elLineNumbers)
-    this.elLineNumbers.remove()
+    if (this.elLineNumbers) {
+      this.elLineNumbers.remove()
+    }
   }
 
   createElement (elementTag, whereToAppend) {
@@ -138,6 +141,9 @@ export default class codecup {
     this.opts.copyButton = this.opts.copyButton || false
     this.opts.maxLines = this.opts.maxLines || 100
     this.opts.minLines = this.opts.minLines || 1
+
+
+    console.log(this.opts)
 
     // this.opts.handleSelfClosingCharacters = this.opts.handleSelfClosingCharacters || false
 
@@ -166,10 +172,11 @@ export default class codecup {
       this.elTextarea.setAttribute('autocorrect', 'off')
     }
 
-    if (this.opts.lineNumbers) {
-      // this.elWrapper.classList.add('codecup--has-line-numbers')
+    // this.elWrapper.classList.add('codecup--has-line-numbers')
+    if(this.opts.lineNumbers){
       this.createLineNumbers()
     }
+  
 
     if (this.opts.defaultTheme) {
       injectCss(defaultCssTheme, 'theme-default', this.opts.styleParent)
@@ -191,7 +198,9 @@ export default class codecup {
       this.createCopyButton()
     }
 
-    this.updateLineNumbersCount();
+    if (this.opts.lineNumbers) {
+      this.updateLineNumbersCount();
+    }
 
   }
 
@@ -517,8 +526,10 @@ export default class codecup {
   }
 
   disableLineNumbers() {
+    if (this.opts.lineNumbers) {
+      this.destroyLineNumbers()
+    }
     this.opts.lineNumbers = false;
-    this.destroyLineNumbers()
   }
 
   toggleLineNumbers(){
