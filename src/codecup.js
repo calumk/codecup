@@ -143,7 +143,7 @@ export default class codecup {
     this.opts.minLines = this.opts.minLines || 1
 
 
-    console.log(this.opts)
+    // console.log(this.opts)
 
     // this.opts.handleSelfClosingCharacters = this.opts.handleSelfClosingCharacters || false
 
